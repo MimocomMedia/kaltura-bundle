@@ -1,0 +1,65 @@
+This is the Sakai OAE / Kaltura integration. 
+Developed by Aaron Zeckoski (Lead) of Unicon for Kaltura and New York University.
+
+Unicon:     http://www.unicon.net/
+Sakai OAE:  http://sakaiproject.org/node/2239
+Kaltura:    http://corp.kaltura.com/
+
+Introduction
+------------
+This integration will intercept media files which are loaded into Sakai OAE and then 
+send them over to the Kaltura server (as configured). The OAE content item will be updated
+with Kaltura specific data so that a Kaltura player can be rendered for the user.
+This is all seamless to the end user (they should not even realize they are using Kaltura).
+
+
+Source
+------
+The source code is located on https://github.com at:
+
+	https://github.com/Unicon/Kaltura-OAE
+
+Checkout the source code using git version 1.7 (or higher)
+
+    git clone git://github.com/Unicon/Kaltura-OAE.git kaltura
+
+
+Build
+-----
+From the base directory of the code (where this README is located)
+
+	mvn clean install
+
+NOTE: Maven 2.2.x and Java 1.6 are required to build the source
+
+
+Deploy
+------
+Upload the target/net.unicon.kaltura-*.jar into your OAE instance using the system console (your.server/system/console/bundles)
+OR 
+deploy into a running OAE instance using Maven:
+
+	mvn clean install -Predeploy
+
+
+Configuration
+-------------
+Use the system console (your.server/system/console/configMgr) and click on "Kaltura Service" and edit the fields
+OR 
+create a load/net.unicon.kaltura.service.KalturaService.cfg file
+(the load directory should be in the same dir as your OAE installation, you may need to create this dir) 
+with at least the following settings in it (see system/console for the complete set):
+
+kaltura.partnerid=111
+kaltura.secret=sssssssssssssssss
+kaltura.adminsecret=aaaaaaaaaaaaaaaaaaaa
+
+
+UI Configuration
+----------------
+TODO
+
+
+Send any questions to Charise M. Arrowood (carrowood@unicon.net).
+
+-Aaron Zeckoski (azeckoski @ unicon.net) (azeckoski @ vt.edu)
