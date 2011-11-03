@@ -3,9 +3,9 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.sakaiproject.nakamura</groupId>
-        <artifactId>base</artifactId>
-        <version>0.11-SNAPSHOT</version>
+      <groupId>org.sakaiproject.nakamura</groupId>
+      <version>1.1-SNAPSHOT</version>
+      <artifactId>base</artifactId>
     </parent>
     <artifactId>net.unicon.kaltura</artifactId>
     <packaging>bundle</packaging>
@@ -15,8 +15,8 @@
     <inceptionYear>2011</inceptionYear>
     <properties>
         <!-- NOTE: these values may need to be updated to the current version of OAE -->
-        <nakamura.version>0.11-SNAPSHOT</nakamura.version>
-        <core.version>1.0-SNAPSHOT</core.version>
+        <nakamura.version>1.1-SNAPSHOT</nakamura.version>
+        <core.version>1.1-SNAPSHOT</core.version>
     </properties>
 
     <dependencies>
@@ -33,6 +33,10 @@
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.scr.annotations</artifactId>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+          <groupId>javax.jcr</groupId>
+          <artifactId>jcr</artifactId>
         </dependency>
 
         <!-- base OAE deps -->
@@ -80,7 +84,7 @@
         </dependency>
         <dependency>
             <groupId>org.sakaiproject.nakamura</groupId>
-            <artifactId>org.sakaiproject.nakamura.files</artifactId>
+            <artifactId>org.sakaiproject.nakamura.files.api</artifactId>
             <version>${nakamura.version}</version>
             <scope>provided</scope>
         </dependency>
@@ -92,7 +96,13 @@
         </dependency>
         <dependency>
             <groupId>org.sakaiproject.nakamura</groupId>
-            <artifactId>org.sakaiproject.nakamura.profile</artifactId>
+            <artifactId>org.sakaiproject.nakamura.doc</artifactId>
+            <version>${nakamura.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.sakaiproject.nakamura</groupId>
+            <artifactId>org.sakaiproject.nakamura.profile.api</artifactId>
             <version>${nakamura.version}</version>
             <scope>provided</scope>
         </dependency>
@@ -111,7 +121,7 @@
         </dependency>
         <dependency>
             <groupId>org.sakaiproject.nakamura</groupId>
-            <artifactId>org.sakaiproject.nakamura.search</artifactId>
+            <artifactId>org.sakaiproject.nakamura.search.api</artifactId>
             <version>${nakamura.version}</version>
             <scope>provided</scope>
         </dependency>
@@ -142,7 +152,6 @@
             <version>2.0.4-incubator</version>
             <scope>provided</scope>
         </dependency>
-<!-- 
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.commons.json</artifactId>
@@ -150,22 +159,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.sling</groupId>
-            <artifactId>org.apache.sling.jcr.base</artifactId>
-            <version>2.1.0</version>
+          <groupId>org.apache.sling</groupId>
+          <artifactId>org.apache.sling.commons.osgi</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.apache.sling</groupId>
-            <artifactId>org.apache.sling.jcr.resource</artifactId>
-            <version>2.0.7-20100823</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.sling</groupId>
-            <artifactId>org.apache.sling.commons.testing</artifactId>
-            <version>2.0.5-20100823</version>
-            <scope>test</scope>
-        </dependency>
- -->
 
         <!-- testing utils -->
         <dependency>

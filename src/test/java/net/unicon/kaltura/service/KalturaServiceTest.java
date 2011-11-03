@@ -51,36 +51,6 @@ public class KalturaServiceTest {
     }
 
     @Test
-    public void testIsFileVideo() {
-        assertTrue( service.isFileVideo(".mp4", "") );
-        assertTrue( service.isFileVideo("", "video/mpeg") );
-        assertTrue( service.isFileVideo(".mov", "video/quicktime") );
-
-        assertFalse( service.isFileVideo(".xls", "") );
-        assertFalse( service.isFileVideo("", "text/html") );
-        assertFalse( service.isFileVideo(".txt", "text/plain") );
-        assertFalse( service.isFileVideo("", "") );
-        assertFalse( service.isFileVideo(null, null) );
-
-        // NOTE: cannot throw exception
-    }
-
-    @Test
-    public void testIsFileAudio() {
-        assertTrue( service.isFileAudio(".mp3", "") );
-        assertTrue( service.isFileAudio("", "audio/mpeg") );
-        assertTrue( service.isFileAudio(".aif", "audio/x-aiff") );
-
-        assertFalse( service.isFileAudio(".xls", "") );
-        assertFalse( service.isFileAudio("", "text/html") );
-        assertFalse( service.isFileAudio(".txt", "text/plain") );
-        assertFalse( service.isFileAudio("", "") );
-        assertFalse( service.isFileAudio(null, null) );
-
-        // NOTE: cannot throw exception
-    }
-
-    @Test
     public void testMakeKalturaTitle() {
         String title = null;
         Map<String, Object> contentProperties = new HashMap<String, Object>();
