@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
       <groupId>org.sakaiproject.nakamura</groupId>
-      <version>1.1-SNAPSHOT</version>
+      <version>1.0.2</version>
       <artifactId>base</artifactId>
     </parent>
     <artifactId>net.unicon.kaltura</artifactId>
@@ -15,8 +15,8 @@
     <inceptionYear>2011</inceptionYear>
     <properties>
         <!-- NOTE: these values may need to be updated to the current version of OAE -->
-        <nakamura.version>1.1-SNAPSHOT</nakamura.version>
-        <core.version>1.1-SNAPSHOT</core.version>
+        <nakamura.version>1.0.2</nakamura.version>
+        <core.version>1.0.2</core.version>
     </properties>
 
     <dependencies>
