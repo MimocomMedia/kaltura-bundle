@@ -16,7 +16,7 @@
     <properties>
         <!-- NOTE: these values may need to be updated to the current version of OAE -->
         <nakamura.version>1.0.2</nakamura.version>
-        <core.version>1.0.2</core.version>
+        <core.version>1.1-20111013</core.version>
     </properties>
 
     <dependencies>
