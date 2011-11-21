@@ -361,7 +361,7 @@ public class KalturaService implements FileUploadHandler, EventHandler {
    * (non-Javadoc)
    * @see org.sakaiproject.nakamura.api.files.FileUploadHandler#handleFile(java.lang.String, java.io.InputStream, java.lang.String, boolean)
    */
-  public void handleFile(Map<String, Object> results, String poolId, InputStream inputStream, String userId, boolean isNew) throws IOException {
+  public void handleFile(String poolId, InputStream inputStream, String userId, boolean isNew) throws IOException {
     Map<String, Object> contentProperties = getContentProperties(poolId);
     // check if this is a video file and do nothing if it is not
     String mimeType = (String)contentProperties.get(InternalContent.MIMETYPE_FIELD);

@@ -88,7 +88,7 @@
         </dependency>
         <dependency>
             <groupId>org.sakaiproject.nakamura</groupId>
-            <artifactId>org.sakaiproject.nakamura.files.api</artifactId>
+            <artifactId>org.sakaiproject.nakamura.files</artifactId>
             <version>${nakamura.version}</version>
             <scope>provided</scope>
         </dependency>
@@ -106,7 +106,7 @@
         </dependency>
         <dependency>
             <groupId>org.sakaiproject.nakamura</groupId>
-            <artifactId>org.sakaiproject.nakamura.profile.api</artifactId>
+            <artifactId>org.sakaiproject.nakamura.profile</artifactId>
             <version>${nakamura.version}</version>
             <scope>provided</scope>
         </dependency>
@@ -125,7 +125,7 @@
         </dependency>
         <dependency>
             <groupId>org.sakaiproject.nakamura</groupId>
-            <artifactId>org.sakaiproject.nakamura.search.api</artifactId>
+            <artifactId>org.sakaiproject.nakamura.search</artifactId>
             <version>${nakamura.version}</version>
             <scope>provided</scope>
         </dependency>
