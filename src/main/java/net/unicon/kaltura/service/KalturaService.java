@@ -303,7 +303,14 @@ public class KalturaService implements FileUploadHandler, EventHandler {
     boolean updateEvent = "update".equals(event.getProperty("op"));
     String poolId = (String) event.getProperty(TOPIC_PROPERTY_POOLID);
     if (poolId != null && updateEvent) {
-      Content content = getContent(poolId);
+      Content content = null;
+
+      try {
+        content = getContent(poolId);
+      } catch (RuntimeException e) {
+        LOG.warn("Couldn't find content path to update properties: " + poolId);
+      }
+
       if (content != null) {
         // check for the key
         String kalturaEntryId = (String) content.getProperties().get(OAE_CONTENT_NEW_FLAG);
