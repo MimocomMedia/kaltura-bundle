@@ -308,7 +308,7 @@ public class KalturaService implements FileUploadHandler, EventHandler {
       try {
         content = getContent(poolId);
       } catch (RuntimeException e) {
-        LOG.warn("Couldn't find content path to update properties: " + poolId);
+        LOG.info("Couldn't find content path to update properties: " + poolId);
       }
 
       if (content != null) {
